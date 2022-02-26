@@ -20,6 +20,7 @@ app.get("/accounts", async (req, res) => {
     res.json(results.rows);
   } catch (error) {
     console.log(error);
+    return res.status(422).json({ msg: "Unable to connect to database" });
   }
 });
 

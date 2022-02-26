@@ -2,9 +2,9 @@ FROM node:latest
 
 RUN npm install -g nodemon
 
-RUN mkdir -p /app/src
+RUN mkdir -p /app
 
-WORKDIR /app/src
+WORKDIR /app
 
 COPY package.json .
 

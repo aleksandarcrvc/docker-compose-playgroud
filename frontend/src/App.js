@@ -5,7 +5,7 @@ function App() {
   const [accounts, setAccounts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3001/accounts")
+    fetch(`${process.env.REACT_APP_API_HOST}/accounts`)
       .then((res) => res.json())
       .then((data) => console.log(data) || setAccounts(data));
   }, []);

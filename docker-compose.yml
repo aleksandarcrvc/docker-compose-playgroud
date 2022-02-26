@@ -19,7 +19,7 @@ services:
     depends_on:
       - "db"
     volumes:
-      - ./backend:/app/src
+      - ./backend:/app
   frontend:
     build: "./frontend"
     ports:
@@ -27,4 +27,4 @@ services:
     depends_on:
       - "backend"
     volumes:
-      - ./frontend:/app/src
+      - ./frontend:/app
